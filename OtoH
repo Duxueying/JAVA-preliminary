@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class OtoH{
+	public static void main(String[] args){
+		System.out.print("please enter a decimal intege");
+		Scanner input=new Scanner(System.in);
+		int n=input.nextInt();
+		int i=0,n1=n;
+		char[] s=new char[100];
+		while(n!=0)
+		{
+			int t=n%16;
+			if(t>=0&&t<=10)
+			{
+				s[i]=(char)(t+'0');
+				i++;
+			}
+			else
+			{
+				s[i]=(char)(t+'A'-10);
+				i++;
+			}
+			n=n/16;
+		}
+		for(int j=i-1;j>=0;j--)
+		{
+			System.out.print(s[j]);
+		}
+	}
+}
