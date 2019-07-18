@@ -1,0 +1,39 @@
+public class DtoH
+{
+	public static String reverse(String s) 
+	{
+        int length = s.length();
+        String r = "";
+        for (int i = length - 1; i >= 0; i--) 
+		{
+            r +=s.charAt(i);  //返回指定索引处的char值
+        }
+        return r;
+    }
+	public static String DtoH(int n)
+	{
+		String r = "";   //定义一个字符串变量
+		while (n > 0) 
+		{
+		    int yushu = n % 16;
+		    int shang = n / 16;
+		    if (yushu > 9)
+		    {
+			    char c = (char)((yushu - 10) + 'A'); //变成相对应的字符
+			    r += c;
+		    } 
+		    else 
+		    {
+		        r += yushu;
+		    }
+			    n = shang;
+	    }
+		    return reverse(r);
+	    }
+		public static void main(String[] args) 
+	{
+		System.out.println(DtoH(1958));
+	}
+ }
+
+	
