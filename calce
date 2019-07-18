@@ -1,0 +1,27 @@
+public class calcE
+{
+	public static double calcE(int n) 
+	{
+		double e = 0;
+		for (int i = 0; i < n; i++) 
+		{
+			e += (1.0 / fac(i));
+		}
+		return e;
+	}
+	public static double fac(int n)
+	{
+		if(n==0||n==1)
+		{
+			return 1;
+		}
+		else
+		{
+			return n*fac(n-1);
+		}
+	}
+	public static void main(String[] args)
+	{
+		System.out.printf("e = %f%n", calcE(250));
+	}
+}
