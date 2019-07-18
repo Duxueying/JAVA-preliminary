@@ -1,0 +1,26 @@
+public class calcp
+{
+	public static double calcp(int n)
+	{
+		double p=0;
+		double fm=0;
+		for(int i=0;i<n;i++)
+		{
+			fm=2*i+1;
+			double value=1.0/fm;
+			if(i%2==0)
+			{
+				p+=value;
+			}
+			else
+			{
+			    p-=value;
+			}
+		}
+		return p*4;
+	}
+	public static void main(String[] args)
+	{
+		System.out.printf("p = %f%n", calcp(10000));
+	}
+}
