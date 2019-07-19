@@ -1,0 +1,28 @@
+public class aver
+{
+	public static int aver(int[] a)
+	{
+		int max=0,min=0,sum=0;
+		for(int i=0;i<a.length-1;i++)
+		{
+			if(a[i]>a[i+1])
+			{
+				max=a[i];
+			}
+			if(a[i]<a[i+1])
+			{
+				min=a[i];
+			}
+		}
+		for(int i=0;i<a.length-1;i++)
+		{
+			sum+=a[i];
+		}
+		return (sum-max-min)/(a.length-3);
+	}
+	public static void main(String[] args)
+	{
+		System.out.println(aver(new int[] { 1,2,3,4,5,}));
+
+	}
+}	
