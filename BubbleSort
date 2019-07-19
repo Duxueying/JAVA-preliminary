@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class bubbleSort
+{
+	public static void main(String[] args)
+	{
+		int[] a=new int[5];
+		int i=0,j=0,t=0;
+		System.out.printf("please enter integer");
+		Scanner input=new Scanner(System.in);
+		for(i=0;i<a.length;i++)
+		{
+			a[i]=input.nextInt();
+		}
+		for(i=0;i<a.length;i++)
+		{
+			for(j=1;j<a.length-i;j++)
+			{
+				if(a[j-1]>a[j])
+				{
+					t=a[j-1];
+					a[j-1]=a[j];
+					a[j]=t;
+				}
+			}
+		}
+		for(i=0;i<a.length;i++)
+		{
+			System.out.printf("%5d",a[i]);
+		}
+	}
+}
