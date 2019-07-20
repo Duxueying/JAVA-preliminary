@@ -1,0 +1,19 @@
+class Person{
+	public String name=null;
+	public int gender=0;
+	public int age=0;
+	public String toString(){
+		return String.format("Person(%s,%d,%d)",name,gender,age);
+	}
+	public Person(String n,int g,int a){
+		name=n;
+		gender=g;
+		age=a;
+	}
+}
+	public class Dxy{
+		public static void main(String[] args){
+			Person p=new Person("bite",2,4);
+			System.out.print(p.toString());
+		}
+	}
