@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Mul {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("请输入一个数");
+        long number=scan.nextLong();
+        System.out.println("你输入的数字是"+number);
+        System.out.printf("%d",(number<<1));
+        System.out.printf("%d",(number<<2));
+        System.out.printf("%d",(number<<3));
+        System.out.printf("%d",(number<<4));
+    }  
+}
