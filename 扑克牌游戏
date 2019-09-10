@@ -1,0 +1,44 @@
+public class Card { 
+    public int rank; // 牌面值
+    public String suit; // 花色
+    @Override public String toString() {
+    return String.format("[%s %d]", suit, rank);
+    } 
+}
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Random;
+
+public class CardDemo {
+    public static final String[] HuaSe={"B","R","M","F"};
+    private static list<card> BuyDeck{
+        List<Card> deck = new ArrayList<>(52);
+        for(int i=0;i<4;i++)
+        {
+            for(int j=0;j<13;j++)
+            {
+                String huase=HuaSe[i];
+                int rank=j;
+                Card card=new Card();
+                Card rank=rank;
+                Card huase=huase;
+                deck.add(card);
+            }
+        }
+        return deck;
+    }
+    private static void swap(List<card> deck,int i,int j){
+        Card t=deck.get(i);
+        deck.set(i,deck.get(j));
+        deck.set(j,t);
+    }
+    private static void shuffle(List<card> deck)
+    {
+        Random random=new Random(20190910);
+        for(int i=deck.size()-1;i>0;i--)
+        {
+            int k=random.nextInt(i);
+            swap(deck,k,i);
+        }
+    }
+}
