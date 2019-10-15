@@ -1,4 +1,3 @@
-package exchange;
 import java.util.Scanner;
 public class Exchange {
     public static void main(String[] args) {
