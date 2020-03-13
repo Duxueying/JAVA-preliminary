@@ -1,0 +1,33 @@
+CREATE TABLE `classes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+CREATE TABLE `students` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `sn` varchar(15) NOT NULL,
+  `class_id` int(11) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `sn` (`sn`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `courses` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  `teacher` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8；
+
+
+CREATE TABLE `student_course_relations` (
+  `student_id` int(11) NOT NULL,
+  `course_id` int(11) NOT NULL,
+  `score` double DEFAULT NULL,
+  PRIMARY KEY (`student_id`,`course_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8；
+
